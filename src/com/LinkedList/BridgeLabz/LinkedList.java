@@ -52,7 +52,7 @@ public class LinkedList {
             System.out.println("List is empty");    
             return;    
         }    
-        System.out.println("Linked List "); 
+        System.out.println("\nLinked List :"); 
         
         while(current != null) 
         {       
@@ -92,8 +92,32 @@ public class LinkedList {
     {
     	Node newNode = new Node(newData);
     	
+    	if(head !=null)
+    	{
     	newNode.next = prevNode.next;//New node is added to the previous nodes next 
     	prevNode.next = newNode;//
+    	}
+    	else
+    	{
+    		System.out.println("List is Empty..");
+    	}
+    }
+    
+    /*
+     * Deleting the First Node Of the Linked List
+     */
+    public void deleteFirstNode(Node Head)
+    {
+    	if(head != null)//checking if Head is Null or Not
+    		{
+    		Node temp = head;
+    		head = head.next;
+    		}
+    	else
+    	{
+    		System.out.println("List is Empty..");
+    	}
+        
     }
            
 }    

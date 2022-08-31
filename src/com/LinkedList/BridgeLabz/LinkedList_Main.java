@@ -2,7 +2,7 @@ package com.LinkedList.BridgeLabz;
 
 import java.util.Scanner;
 /*
- * UC-4 Insert the node in Between
+ * UC-5 Deleting the First Node of the Linked List
  */
 public class LinkedList_Main  extends LinkedList
 {
@@ -15,8 +15,10 @@ public class LinkedList_Main  extends LinkedList
 		
 		while(true)
 		{
-			System.out.println("1.Insert \n2.Append \n3.Insert In Between \n4.Display \n5.Exit" );
+			System.out.println("=========================================");
+			System.out.println("1.Insert \n2.Append \n3.Insert In Between \n4.Display \n5.Delete First Node \n6.Exit" );
 			System.out.println("Enter your choice:");
+			
 			ch = sc.nextInt();
 			
 			switch(ch)
@@ -42,7 +44,11 @@ public class LinkedList_Main  extends LinkedList
 				List.displayList();
 				break;
 				
-			case 5:
+			case  5:
+				List.deleteFirstNode(head);
+				break;
+				
+			case 6:
 				System.out.println("Exited....!");
 				return;
 				
