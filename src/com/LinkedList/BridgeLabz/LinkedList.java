@@ -86,5 +86,14 @@ public class LinkedList {
             tail = newNode;
         }
     }
+    
+    
+    public void insertBetween(Node prevNode , int newData)
+    {
+    	Node newNode = new Node(newData);
+    	
+    	newNode.next = prevNode.next;//New node is added to the previous nodes next 
+    	prevNode.next = newNode;//
+    }
            
 }    
