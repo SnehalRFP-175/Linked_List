@@ -1,29 +1,60 @@
 package com.LinkedList.BridgeLabz;
 
-import com.LinkedList.BridgeLabz.LinkedList.Node;
-
+import java.util.Scanner;
 /*
- * UC-2 Create Linked List By Adding 
+ * UC-4 Insert the node in Between
  */
-public class LinkedList_Main 
+public class LinkedList_Main  extends LinkedList
 {
-	private static final Node head = null;
-
+	
 	public static void main(String a[])
 	{
 		LinkedList List = new LinkedList();
-		   
-	        //Add nodes to the list    
-	        List.addNode(56);       
-	           
-	        //Displays the nodes present in the list    
-	        List.displayList(); 
-	        
-	        //append the list 
-	        List.append(30);
-	        List.append(70);
-	        //Displays the List after appending the data 
-	        List.displayList(); 
+		Scanner sc = new Scanner(System.in);
+		int ch;
+		
+		while(true)
+		{
+			System.out.println("1.Insert \n2.Append \n3.Insert In Between \n4.Display \n5.Exit" );
+			System.out.println("Enter your choice:");
+			ch = sc.nextInt();
+			
+			switch(ch)
+			{
+			case 1:
+				System.out.println("Enter the Data :");
+				int num=sc.nextInt();
+				List.addNode(num);
+				break;
+			case 2:
+				System.out.println("Enter the Data :");
+				int appenddata = sc.nextInt();
+				List.append(appenddata);
+				break;
+				
+			case 3:
+				System.out.println("Enter the Data :");
+				int insert = sc.nextInt();
+				List.insertBetween(head, insert);
+				break;
+				
+			case 4:
+				List.displayList();
+				break;
+				
+			case 5:
+				System.out.println("Exited....!");
+				return;
+				
+			default:
+				System.out.println("Enter Valid Choice...!");
+				break;
+					
+				
+			}
+		}
+	          
+	      
 	}
 
 }
